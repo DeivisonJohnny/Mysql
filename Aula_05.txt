@@ -1,0 +1,13 @@
+INSERINDO dados na minha tabela
+-----------------------------------
+insert into pessoas values -> Esse comando vai INSERIR EM PESSOAS OS VALORES abaixo...
+(default, 'Meu ovo', '1999-10-2', 'F', '90.5', '1.96', 'França'); -> Serão os dados que vão adicionado na tabela
+
+
+select * from pessoas; -> vai selecionar todos e dados da tabela pessoas e mostrar
+
+___________________________________________________________________________________________________________________
+
+
+DDL = Data Definition Language-> São comandos de definição
+DML = Data Manipulation Language -> São comandos de definição de dados: INSERT INTO

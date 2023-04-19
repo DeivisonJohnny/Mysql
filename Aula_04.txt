@@ -1,0 +1,57 @@
+Comando: Create database -->Nome do banco de dados<-- 
+   Cria um banco de dados com o nome que foi especificado
+
+Comando: Drop database --> Nome do banco <--
+   Remove, derruba, abandona o mando de dados com o nome especifícado
+
+-------------------------------------------------------------------------
+
+; - O ponto e vírgula diz o final do comando.
+
+_________________________________________________________
+
+Create database cadastro          |    vai criar um banco de dados, com a codificação 
+default collate utf8_general_ci;  |->  por padrão e collate padrão voltado para UTF-8
+default character set utf8        |    que são caractere acentuado.
+-----------------------------------     
+_____________________________________________________________________________________
+
+CONSTRAINTS -> São regras que vão definir para criação de coisas no banco de dados
+
+________________________________________________________________________
+CONSTRAINTS     |
+----------------- 
+
+Comando: NOT NULL -> vai obrigar o usuario informar o campo digitável
+Comando: Default 'Brasil' -> Caso o usuário não digite nada, por padrão vai ser "Brasil"
+comando: auto_increment-> vai criar uma sequência numérica (id) = id int not null auto_increment
+---------
+Comando: primary key(id) -> vai dizer que o campo selecionado que é o "id", não ser repetido
+--------------------------------------------------------------
+Comando completo:
+
+use cadastro;
+
+create table pessoas (
+id int not null auto_increment,
+nome varchar(30) not null,
+nascimento date,
+sexo enum('M', 'F'),
+peso decimal(5,2),
+altura decimal(3,2),
+nascionalidade varchar(20) default 'Brasil',
+primary key(id)
+) default charset = utf8;
+
+________________________________________________________
+
+Dentro das tabelas possuem COLUNAS que nesse caso da tabela pessoas são:
+
+id
+nome
+nascimento
+sexo
+peso
+altura
+nascionalidade
+__________________________
