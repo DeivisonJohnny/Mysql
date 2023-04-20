@@ -1,0 +1,66 @@
+1°) criando primeiro banco de dados. Usando o comando:
+    -> create database nome_do_banco;
+
+2°) Criando a primeira tabela. Usando o comando:
+    -> create table nome_da_tabela(
+        aqui vão os campos com seus tipos primitivos, exemplo:
+        nome primitivo(),
+        sobrenome primitivo(),
+        idade primitivo(),
+        
+    );
+
+
+Alguns tipos primitivos:
+    
+    * Númericos
+    * Data/tempo
+    * Literal
+    * Espacial
+
+        Subdivisões de tipos primitivos:
+
+            * Númericos -> Inteiro, reais e lógicos
+            * Data/tempo ->
+            * Literais -> Caractere, texti, binário e coleções
+            * 
+
+            Precisões:
+                Númericos:
+                    Inteiro -> TinyInt, SmallInt, int, MediumInt, BigInt
+                    Real -> Decimal, Float, Double e Real
+                    Lógico -> Bit e Boolean
+                
+                Data/Tempo -> Date, DateTime, Timestamp, Time e Year
+
+                Literal:
+                    Caractere -> Char e Varchar
+                    Texto -> TinyText, Text, MediumText e LongText
+                    Binário -> TinyBlob, Blob, MediumBlob e LongBlob
+                    Coleção -> Enum e Set
+                
+                Espacial -> Geometry, Point, Polygon e MultiPolygon
+
+
+
+NOTA: 
+    Subdivisões e precisões:
+        A precisões é usado definir a quantidade de bytes que ele vai usar para armazenar esses dados
+
+
+Código executado na aula:
+
+  1°  create database cadastro;   -> Criando banco de dados
+
+  2°  use cadastro; -> selecionar o banco de dados para maninulação  
+
+  3° create table pessoas( 
+        nome varchar(30),
+        idade tinyint,
+        sexo char(1),
+        peso float,
+        altura float,
+        nascionalidade varchar(20)
+  );    -> vai criar a tabela com seus campos e tipos primitivos
+
+  4° describe pessoas; -> descreva a tabela pessoas  
